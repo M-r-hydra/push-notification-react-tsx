@@ -4,7 +4,6 @@ import React, { useState } from "react";
 // Notif
 import addNotification, { Notifications } from "react-push-notification";
 import { Options } from "react-push-notification/dist/notifications/Storage";
-
 // Notif
 
 const App = () => {
