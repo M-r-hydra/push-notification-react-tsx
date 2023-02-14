@@ -14,7 +14,9 @@ const App = () => {
     message: "",
     theme: "darkblue",
     native: true,
+    icon: "",
   });
+  const [icon, setIcon] = useState<any>(" ");
   const { title, subtitle, message } = pushData;
   return (
     <div>
@@ -46,8 +48,21 @@ const App = () => {
         }
         placeholder="Enter message"
       />
+      <input
+        type="file"
+        onChange={(e: React.FormEvent<HTMLInputElement>) => {
+          setIcon(!e.currentTarget.files ? " " : e.currentTarget.files[0]);
+        }}
+      />
       <br />
       <br />
+      {icon !== " " && (
+        <img
+          src={URL.createObjectURL(icon)}
+          alt=""
+          style={{ width: "20rem" }}
+        />
+      )}
       <br />
       <br />
       <button
@@ -58,6 +73,7 @@ const App = () => {
             message,
             theme: "darkblue",
             native: true, // when using native, your OS will handle theming.
+            icon: icon !== " " ? URL.createObjectURL(icon) : "",
           });
         }}
       >
