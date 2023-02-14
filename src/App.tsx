@@ -27,6 +27,10 @@ const App = () => {
         }
         placeholder="Enter Title"
       />{" "}
+      <br />
+      <br />
+      <br />
+      <br />
       <input
         type="text"
         onChange={(e) =>
@@ -37,6 +41,10 @@ const App = () => {
         }
         placeholder="Enter subtitle"
       />{" "}
+      <br />
+      <br />
+      <br />
+      <br />
       <input
         type="text"
         onChange={(e) =>
@@ -47,12 +55,20 @@ const App = () => {
         }
         placeholder="Enter message"
       />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <input
         type="file"
         onChange={(e: React.FormEvent<HTMLInputElement>) => {
           setIcon(!e.currentTarget.files ? " " : e.currentTarget.files[0]);
         }}
       />
+      <br />
+      <br />
+      <br />
       <br />
       <br />
       {icon !== " " && (
@@ -76,7 +92,7 @@ const App = () => {
           });
         }}
       >
-        warning notif = darkblue
+        Click Me To See PushNotification {":)"}
       </button>
     </div>
   );
